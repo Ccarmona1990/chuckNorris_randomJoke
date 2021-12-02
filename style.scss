@@ -1,0 +1,47 @@
+@import "./sass/resets";
+@import "./sass/variables";
+@import "./sass/shake";
+@import "./sass/header";
+@import "./sass/center";
+
+main {
+  @include center();
+  line-height: 1.5;
+  margin-top: 5rem;
+  display: grid;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  @include center();
+
+  img {
+    display: block;
+    padding: 5vh 20vw;
+    @include center();
+  }
+  p {
+    font-size: 1.5rem;
+    color: $clr-grey-5;
+  }
+}
+
+.btn {
+  text-transform: uppercase;
+  background-color: $clr-primary-5;
+  border-radius: 0.7rem;
+  padding: 8px;
+  letter-spacing: 0.25rem;
+  color: white;
+  border: 1px solid $clr-primary-5;
+  transition: $transition1;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $clr-primary-1;
+    color: lightblue;
+    border: 1px solid lightblue;
+  }
+}
